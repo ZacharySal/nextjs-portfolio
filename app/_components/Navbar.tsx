@@ -3,34 +3,36 @@
 import styles from "../page.module.css";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faXmark, faXmarkCircle } from "@fortawesome/free-solid-svg-icons";
 
 export default function Navbar() {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
   return (
     <nav className={styles.navigation}>
       <h1>ZRS</h1>
-      <div className={styles.desktopHidden}>
-        {showMobileMenu ? (
-          <FontAwesomeIcon
-            style={{ fontSize: "1.5rem", zIndex: "10" }}
-            onClick={() => setShowMobileMenu(!showMobileMenu)}
-            icon={faXmark}
-          />
-        ) : (
-          <FontAwesomeIcon
-            style={{ fontSize: "1.5rem", zIndex: "10" }}
-            onClick={() => setShowMobileMenu(!showMobileMenu)}
-            icon={faBars}
-          />
-        )}
-      </div>
+      {showMobileMenu ? (
+        <FontAwesomeIcon
+          className={styles.desktopHidden}
+          style={{ fontSize: "1.5rem", zIndex: "10" }}
+          onClick={() => setShowMobileMenu(false)}
+          icon={faXmark}
+        />
+      ) : (
+        <FontAwesomeIcon
+          className={styles.desktopHidden}
+          style={{ fontSize: "1.5rem", zIndex: "10" }}
+          onClick={() => setShowMobileMenu(true)}
+          icon={faBars}
+        />
+      )}
 
       {showMobileMenu && (
         <div className={`${styles.mobileNav} ${styles.desktopHidden}`}>
           <ul>
-            <a href="#about" onClick={() => setShowMobileMenu(false)}></a>
-            <li>About</li>
+            <a href="#about" onClick={() => setShowMobileMenu(false)}>
+              <li>About</li>
+            </a>
+
             <a href="#skills" onClick={() => setShowMobileMenu(false)}>
               <li>Skills</li>
             </a>
