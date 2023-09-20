@@ -13,14 +13,14 @@ export default function Navbar() {
       {showMobileMenu ? (
         <FontAwesomeIcon
           className={styles.desktopHidden}
-          style={{ fontSize: "1.5rem", zIndex: "10" }}
+          style={{ fontSize: "1.75rem", zIndex: "10" }}
           onClick={() => setShowMobileMenu(false)}
           icon={faXmark}
         />
       ) : (
         <FontAwesomeIcon
           className={styles.desktopHidden}
-          style={{ fontSize: "1.5rem", zIndex: "10" }}
+          style={{ fontSize: "1.75rem", zIndex: "10" }}
           onClick={() => setShowMobileMenu(true)}
           icon={faBars}
         />

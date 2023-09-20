@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Navbar from "./_components/Navbar";
+import ContactForm from "./_components/ContactForm";
 import styles from "./page.module.css";
 import React from "react";
 
@@ -264,23 +265,7 @@ export default function Home() {
             <hr />
           </div>
 
-          <div className={styles.contactForm}>
-            <div className={styles.flexCol}>
-              <label>Name</label>
-              <input type="text" placeholder="John Doe" />
-            </div>
-            <div className={`${styles.flexCol} ${styles.email}`}>
-              <label>Email Address</label>
-              <input type="text" placeholder="johndoe@gmail.com" />
-            </div>
-            <div className={`${styles.flexCol} ${styles.message}`}>
-              <label>Message</label>
-              <textarea className={styles.messageInput} placeholder="Enter your message here"></textarea>
-            </div>
-            <div className={`${styles.btn} ${styles.submit}`} data-button-type="submit">
-              Submit
-            </div>
-          </div>
+          <ContactForm />
         </section>
 
         <footer>
