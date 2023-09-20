@@ -4,6 +4,7 @@ import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import Alert from "@mui/material/Alert";
 import styles from "../page.module.css";
+import CircularProgress from "@mui/material/CircularProgress";
 
 export default function ContactForm() {
   const form: any = useRef();
@@ -12,10 +13,11 @@ export default function ContactForm() {
 
   const sendEmail = (e: any) => {
     e.preventDefault();
-
+    setIsSending(true);
     emailjs.sendForm("service_22kajt7", "template_8b6vnx9", form.current, "4EBpLXbeKMfOw3JHG").then(
       (result) => {
         e.target.reset();
+        setIsSending(false);
         setMessageSent(true);
       },
       (error) => {
@@ -52,12 +54,9 @@ export default function ContactForm() {
               <label>Message</label>
               <textarea name="message" className={styles.messageInput} placeholder="Enter your message here"></textarea>
             </div>
-            <input
-              type="submit"
-              value="Submit"
-              className={`${styles.btn} ${styles.submit}`}
-              data-button-type="submit"
-            ></input>
+            <button type="submit" className={`${styles.btn} ${styles.submit}`} data-button-type="submit">
+              {isSending ? <CircularProgress size="1rem" color="inherit" /> : "Submit"}
+            </button>
           </form>
         </>
       )}
