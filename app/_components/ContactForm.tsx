@@ -2,9 +2,10 @@
 
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-import Alert from "@mui/material/Alert";
 import styles from "../page.module.css";
 import CircularProgress from "@mui/material/CircularProgress";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
 
 export default function ContactForm() {
   const form: any = useRef();
@@ -28,17 +29,12 @@ export default function ContactForm() {
 
   return (
     <>
-      {/* <form ref={form} onSubmit={sendEmail}>
-        <label>Name</label>
-        <input type="text" name="user_name" />
-        <label>Email</label>
-        <input type="email" name="user_email" />
-        <label>Message</label>
-        <textarea name="message" />
-        <input type="submit" value="Send" />
-      </form> */}
-
-      {messageSent && <Alert>Your email has been sent. Thank you!</Alert>}
+      {messageSent && (
+        <div className={styles.confirmation}>
+          <FontAwesomeIcon style={{ fontSize: "1.25rem", color: "#133955" }} icon={faCheckCircle} />
+          Your message has been sent. Thank you!
+        </div>
+      )}
       {!messageSent && (
         <>
           <form className={styles.contactForm} ref={form} onSubmit={sendEmail}>

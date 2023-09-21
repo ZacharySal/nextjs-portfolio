@@ -3,7 +3,7 @@
 import styles from "../page.module.css";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faXmark, faXmarkCircle } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 
 export default function Navbar() {
   const [showMobileMenu, setShowMobileMenu] = useState(false);

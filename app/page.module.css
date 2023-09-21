@@ -232,6 +232,17 @@
   text-align: start;
 }
 
+.confirmation {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin-top: -1rem;
+  gap: 0.5rem;
+  background-color: #f4f7fb;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
 .footerItems {
   display: flex;
   justify-content: center;
