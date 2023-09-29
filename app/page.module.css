@@ -117,6 +117,8 @@
 
 .skillsGridContainer ul {
   display: grid;
+  padding: 0rem 0.5rem;
+  margin-top: 3.25rem;
   gap: 2.25rem;
   grid-template-columns: repeat(4, 1fr);
   font-weight: 900;

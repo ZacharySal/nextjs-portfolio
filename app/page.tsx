@@ -270,11 +270,21 @@ export default function Home() {
 
         <footer>
           <div className={styles.footerItems}>
-            <p>About Me</p>
-            <p>Skills</p>
-            <p>Projects</p>
-            <p>Contact</p>
-            <p>Resume</p>
+            <a href="#about">
+              <p>About Me</p>
+            </a>
+            <a href="#skills">
+              <p>Skills</p>
+            </a>
+            <a href="#projects">
+              <p>Projects</p>
+            </a>
+            <a href="#contact">
+              <p>Contact</p>
+            </a>
+            <a href="/resume5.pdf" target="_blank">
+              <p>Resume</p>
+            </a>
           </div>
           <p className={styles.copyright}>Copyright © 2023 Zachary Salvaggio</p>
         </footer>
