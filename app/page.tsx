@@ -21,7 +21,7 @@ export default function Home() {
             playing video games, or chasing around a two-foot tall tornado, aka my son.
           </h2>
           <div className={styles.introBtnContainer}>
-            <a href="/resume5.pdf" target="_blank">
+            <a href="/resume.pdf" target="_blank">
               <div className={styles.btn} data-button-type="resume">
                 Resume
               </div>
@@ -282,7 +282,7 @@ export default function Home() {
             <a href="#contact">
               <p>Contact</p>
             </a>
-            <a href="/resume5.pdf" target="_blank">
+            <a href="/resume.pdf" target="_blank">
               <p>Resume</p>
             </a>
           </div>
