@@ -32,7 +32,7 @@ export default function ContactForm() {
       {messageSent && (
         <div className={styles.confirmation}>
           <FontAwesomeIcon style={{ fontSize: "1.25rem", color: "#133955" }} icon={faCheckCircle} />
-          Your message has been sent. Thank you!
+          <p>Your message has been sent</p>
         </div>
       )}
       {!messageSent && (
