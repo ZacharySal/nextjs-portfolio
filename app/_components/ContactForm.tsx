@@ -11,10 +11,15 @@ export default function ContactForm() {
   const form: any = useRef();
   const [isSending, setIsSending] = useState(false);
   const [messageSent, setMessageSent] = useState(false);
+  const [email, setEmail] = useState("");
 
   const sendEmail = (e: any) => {
     e.preventDefault();
     setIsSending(true);
+    if (email.includes("signsecur")) {
+      setIsSending(false);
+      return;
+    }
     emailjs.sendForm("service_22kajt7", "template_8b6vnx9", form.current, "4EBpLXbeKMfOw3JHG").then(
       (result) => {
         e.target.reset();
@@ -44,7 +49,12 @@ export default function ContactForm() {
             </div>
             <div className={`${styles.flexCol} ${styles.email}`}>
               <label>Email Address</label>
-              <input type="text" name="user_email" placeholder="johndoe@gmail.com" />
+              <input
+                type="text"
+                name="user_email"
+                placeholder="johndoe@gmail.com"
+                onChange={(e) => setEmail(e.target.value)}
+              />
             </div>
             <div className={`${styles.flexCol} ${styles.message}`}>
               <label>Message</label>
