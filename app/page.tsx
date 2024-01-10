@@ -8,7 +8,6 @@ export default function Home() {
   return (
     <>
       <Navbar />
-
       <main>
         <section id="about" className={styles.intro}>
           <div className={styles.sectionHeader}>
@@ -16,9 +15,10 @@ export default function Home() {
             <hr />
           </div>
           <h2 className={styles.info}>
-            Hi! I am a recently graduated fullstack developer with a degree in computer science. I&#39;m an active
-            learner and love to explore new web technologies. When I&#39;m not coding, I&#39;m usually reading books,
-            playing video games, or chasing around a two-foot tall tornado, aka my son.
+            I am a recently graduated software engineer with a passion for web development. My
+            learning over the past two years has been primarily focused on front end development,
+            specifically, with React and Nextjs. I posess strong foundational programming skills in
+            addition to a deep understanding of HTML, CSS, and Javascript.
           </h2>
           <div className={styles.introBtnContainer}>
             <a href="/resume.pdf" target="_blank">
@@ -111,13 +111,19 @@ export default function Home() {
           </div>
           <div className={styles.projectsGrid}>
             <div className={styles.projectCard}>
-              <img className={`${styles.projectScreenshot} ${styles.desktopHidden}`} src="/sportly.png" />
-              <img className={`${styles.projectScreenshot} ${styles.mobileHidden}`} src="/sportly-desktop.png" />
+              <img
+                className={`${styles.projectScreenshot} ${styles.desktopHidden}`}
+                src="/sportly.png"
+              />
+              <img
+                className={`${styles.projectScreenshot} ${styles.mobileHidden}`}
+                src="/sportly-desktop.png"
+              />
               <h2 className={styles.projectTitle}>Sportly</h2>
               <p className={styles.projectInfo}>
-                A sports website, created with Nextjs, that offers users access to real-time scores, comprehensive team
-                details, and in-depth game recaps featuring box scores, scoring plays, and a play-by-play feature for
-                NFL games!
+                A sports website, created with Nextjs, that offers users access to real-time scores,
+                comprehensive team details, and in-depth game recaps featuring box scores, scoring
+                plays, and a play-by-play feature for NFL games!
               </p>
               <div className={styles.techStack}>
                 <div className={styles.techIcon}>
@@ -150,7 +156,7 @@ export default function Home() {
                 </div>
               </div>
               <div className={styles.btnContainer}>
-                <a href="https://nextjs-sportly.vercel.app/nfl" target="_blank">
+                <a href="https://nextjs-sportly.vercel.app " target="_blank">
                   <div className={styles.btn} data-button-type="demo">
                     Live Demo
                   </div>
@@ -163,12 +169,18 @@ export default function Home() {
               </div>
             </div>
             <div className={styles.projectCard}>
-              <img className={`${styles.projectScreenshot} ${styles.desktopHidden}`} src="/friendly.png" />
-              <img className={`${styles.projectScreenshot} ${styles.mobileHidden}`} src="/friendly-desktop.png" />
+              <img
+                className={`${styles.projectScreenshot} ${styles.desktopHidden}`}
+                src="/friendly.png"
+              />
+              <img
+                className={`${styles.projectScreenshot} ${styles.mobileHidden}`}
+                src="/friendly-desktop.png"
+              />
               <h2 className={styles.projectTitle}>Friendly</h2>
               <p className={styles.projectInfo}>
-                A social media platform built with React, where users can easily share images, engage with posts through
-                likes and comments, and connect with friends.
+                A social media platform built with React, where users can easily share images,
+                engage with posts through likes and comments, and connect with friends.
               </p>
               <div className={styles.techStack}>
                 <div className={styles.techIcon}>
@@ -214,13 +226,19 @@ export default function Home() {
               </div>
             </div>
             <div className={styles.projectCard}>
-              <img className={`${styles.projectScreenshot} ${styles.desktopHidden}`} src="/readly.png" />
-              <img className={`${styles.projectScreenshot} ${styles.mobileHidden}`} src="/readly-desktop.png" />
+              <img
+                className={`${styles.projectScreenshot} ${styles.desktopHidden}`}
+                src="/readly.png"
+              />
+              <img
+                className={`${styles.projectScreenshot} ${styles.mobileHidden}`}
+                src="/readly-desktop.png"
+              />
               <h2 className={styles.projectTitle}>Readly</h2>
               <p className={styles.projectInfo}>
-                A mock bookstore, created with React, to display book information on any book stored in Google’s
-                database. Create an account to save books to a reading list, add books to your cart, or view your order
-                history.
+                A mock bookstore, created with React, to display book information on any book stored
+                in Google’s database. Create an account to save books to a reading list, add books
+                to your cart, or view your order history.
               </p>
               <div className={styles.techStack}>
                 <div className={styles.techIcon}>
@@ -264,7 +282,6 @@ export default function Home() {
             <h1>Contact</h1>
             <hr />
           </div>
-
           <ContactForm />
         </section>
 
