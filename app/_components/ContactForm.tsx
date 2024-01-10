@@ -6,24 +6,26 @@ import styles from "../page.module.css";
 import CircularProgress from "@mui/material/CircularProgress";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
+import { SubmitHandler, useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { ContactMessageSchema } from "../_models/ContactMessage";
+import type { ContactMessageForm } from "../_models/ContactMessage";
 
 export default function ContactForm() {
-  const form: any = useRef();
-  const [isSending, setIsSending] = useState(false);
-  const [messageSent, setMessageSent] = useState(false);
-  const [email, setEmail] = useState("");
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<ContactMessageForm>({
+    resolver: zodResolver(ContactMessageSchema),
+  });
 
-  const sendEmail = (e: any) => {
-    e.preventDefault();
+  const onSubmit: SubmitHandler<ContactMessageForm> = (data) => {
     setIsSending(true);
-    if (email.includes("signsecur")) {
-      setIsSending(false);
-      return;
-    }
     emailjs.sendForm("service_22kajt7", "template_8b6vnx9", form.current, "4EBpLXbeKMfOw3JHG").then(
       (result) => {
-        e.target.reset();
         setIsSending(false);
+        console.log(result);
         setMessageSent(true);
       },
       (error) => {
@@ -31,6 +33,10 @@ export default function ContactForm() {
       }
     );
   };
+
+  const form: any = useRef();
+  const [isSending, setIsSending] = useState(false);
+  const [messageSent, setMessageSent] = useState(false);
 
   return (
     <>
@@ -42,25 +48,44 @@ export default function ContactForm() {
       )}
       {!messageSent && (
         <>
-          <form className={styles.contactForm} ref={form} onSubmit={sendEmail}>
+          <form className={styles.contactForm} ref={form} onSubmit={handleSubmit(onSubmit)}>
             <div className={styles.flexCol}>
-              <label>Name</label>
-              <input type="text" name="user_name" placeholder="John Doe" />
+              <label htmlFor="user_name">Name</label>
+              <input
+                style={{ border: errors.user_name && "1px solid red" }}
+                type="text"
+                {...register("user_name")}
+                placeholder="John Doe"
+              />
+              {errors.user_name && <p className={styles.formError}>{errors.user_name?.message}</p>}
             </div>
             <div className={`${styles.flexCol} ${styles.email}`}>
-              <label>Email Address</label>
+              <label htmlFor="user_email">Email Address</label>
               <input
                 type="text"
-                name="user_email"
+                style={{ border: errors.user_email && "1px solid red" }}
+                {...register("user_email")}
                 placeholder="johndoe@gmail.com"
-                onChange={(e) => setEmail(e.target.value)}
               />
+              {errors.user_email && (
+                <p className={styles.formError}>{errors.user_email?.message}</p>
+              )}
             </div>
             <div className={`${styles.flexCol} ${styles.message}`}>
-              <label>Message</label>
-              <textarea name="message" className={styles.messageInput} placeholder="Enter your message here"></textarea>
+              <label htmlFor="message">Message</label>
+              <textarea
+                {...register("message")}
+                style={{ border: errors.message && "1px solid red" }}
+                className={styles.messageInput}
+                placeholder="Enter your message here"
+              ></textarea>
+              {errors.message && <p className={styles.formError}>{errors.message?.message}</p>}
             </div>
-            <button type="submit" className={`${styles.btn} ${styles.submit}`} data-button-type="submit">
+            <button
+              type="submit"
+              className={`${styles.btn} ${styles.submit}`}
+              data-button-type="submit"
+            >
               {isSending ? <CircularProgress size="1rem" color="inherit" /> : "Submit"}
             </button>
           </form>

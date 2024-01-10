@@ -263,6 +263,13 @@
   font-weight: 500;
 }
 
+.formError {
+  color: red;
+  font-size: 0.75rem;
+  margin-top: -0.5rem;
+}
+
+
 @media (min-width: 1000px) {
   .desktopHidden {
     display: none !important;
