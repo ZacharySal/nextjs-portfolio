@@ -179,8 +179,9 @@ export default function Home() {
               />
               <h2 className={styles.projectTitle}>Friendly</h2>
               <p className={styles.projectInfo}>
-                A social media platform built with React, where users can easily share images,
-                engage with posts through likes and comments, and connect with friends.
+                A social media platform built with React, where users can easily share their
+                thoughts or memories, engage with posts through likes and comments, and connect with
+                friends.
               </p>
               <div className={styles.techStack}>
                 <div className={styles.techIcon}>

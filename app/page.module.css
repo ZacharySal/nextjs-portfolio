@@ -158,7 +158,9 @@
 .projectCard {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1.25rem;
 }
 
 .projectScreenshot {
@@ -186,8 +188,8 @@
 
 .techIcon img {
   object-fit: cover;
-  width: 3.5rem;
-  height: 3.5rem;
+  width: 3.25rem;
+  height: 3.25rem;
 }
 
 .techIcon {
@@ -263,7 +265,7 @@
   font-weight: 500;
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 800px) {
   .desktopHidden {
     display: none !important;
   }
@@ -302,14 +304,14 @@
   }
 
   .projectsGrid {
-    place-items: center;
-    gap: 10rem;
-    row-gap: 5rem;
+    place-items: start;
+    gap: clamp(1rem, 7vw, 3.5rem);
     grid-template-columns: 1fr 1fr;
   }
 
+
   .projectCard {
-    gap: 2rem;
+    gap: 1.5rem;
   }
 
   .techIcon img {
