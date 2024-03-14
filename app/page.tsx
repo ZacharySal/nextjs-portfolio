@@ -1,8 +1,6 @@
-import Image from "next/image";
-import Navbar from "./_components/Navbar";
 import ContactForm from "./_components/ContactForm";
+import Navbar from "./_components/Navbar";
 import styles from "./page.module.css";
-import React from "react";
 
 export default function Home() {
   return (
@@ -12,13 +10,17 @@ export default function Home() {
         <section id="about" className={styles.intro}>
           <div className={styles.sectionHeader}>
             <h1 id="name">Zachary Salvaggio</h1>
-            <hr />
+            <div className={styles.borderBottom} />
           </div>
           <h2 className={styles.info}>
-            I am a recently graduated software engineer with a passion for web development. My
+            I am a recently graduated software engineer with an extensive skillset in web
+            development. While I primarily focus on front end development with React and Nextjs, I
+            am also very comfortable working with APIs, SQL/NoSQL databases, and various AWS
+            services.
+            {/* I am a recently graduated software engineer with an extensive skillset in web development.
             learning over the past two years has been primarily focused on front end development,
             specifically, with React and Nextjs. I posess strong foundational programming skills in
-            addition to a deep understanding of HTML, CSS, and Javascript.
+            addition to a deep understanding of HTML, CSS, and Javascript. */}
           </h2>
           <div className={styles.introBtnContainer}>
             <a href="/resume.pdf" target="_blank">
@@ -37,14 +39,10 @@ export default function Home() {
         <section id="skills" className={styles.skills}>
           <div className={styles.sectionHeader}>
             <h1>Skills</h1>
-            <hr />
+            <div className={styles.borderBottom} />
           </div>
           <div className={styles.skillsGridContainer}>
             <ul>
-              <li>
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" />
-                <p>HTML</p>
-              </li>
               <li>
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" />
                 <p>React</p>
@@ -62,20 +60,20 @@ export default function Home() {
                 <p>Material UI</p>
               </li>
               <li>
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" />
                 <p>Tailwind</p>
               </li>
               <li>
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" />
-                <p>CSS</p>
-              </li>
-              <li>
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" />
-                <p>Nodejs</p>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg" />
+                <p>Express</p>
               </li>
               <li>
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" />
                 <p>MongoDB</p>
+              </li>
+              <li>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" />
+                <p>Postgresql</p>
               </li>
               <li>
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
@@ -86,20 +84,12 @@ export default function Home() {
                 <p>Typescript</p>
               </li>
               <li>
-                <img src="https://www.svgrepo.com/show/354202/postman-icon.svg" />
-                <p>Postman</p>
-              </li>
-              <li>
-                <img src="https://www.svgrepo.com/show/378475/vercel-fill.svg" />
-                <p>Vercel</p>
-              </li>
-              <li>
-                <img src="https://www.vectorlogo.zone/logos/netlify/netlify-icon.svg" />
-                <p>Netlify</p>
-              </li>
-              <li>
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" />
                 <p>Git</p>
+              </li>
+              <li>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" />
+                <p>AWS</p>
               </li>
             </ul>
           </div>
@@ -107,7 +97,7 @@ export default function Home() {
         <section id="projects" className={styles.projects}>
           <div className={styles.sectionHeader}>
             <h1>Projects</h1>
-            <hr />
+            <div className={styles.borderBottom} />
           </div>
           <div className={styles.projectsGrid}>
             <div className={styles.projectCard}>
@@ -147,7 +137,8 @@ export default function Home() {
                   <p className={styles.iconName}>MUI</p>
                 </div>
                 <div className={styles.techIcon}>
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" />
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" />
+
                   <p className={styles.iconName}>Tailwind</p>
                 </div>
                 <div className={styles.techIcon}>
@@ -201,8 +192,9 @@ export default function Home() {
                   <p className={styles.iconName}>Redux</p>
                 </div>
                 <div className={styles.techIcon}>
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" />
-                  <p className={styles.iconName}>Nodejs</p>
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg" />
+
+                  <p className={styles.iconName}>Express</p>
                 </div>
                 <div className={styles.techIcon}>
                   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" />
@@ -251,8 +243,9 @@ export default function Home() {
                   <p className={styles.iconName}>React</p>
                 </div>
                 <div className={styles.techIcon}>
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" />
-                  <p className={styles.iconName}>Nodejs</p>
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg" />
+
+                  <p className={styles.iconName}>Express</p>
                 </div>
                 <div className={styles.techIcon}>
                   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" />
@@ -281,7 +274,7 @@ export default function Home() {
         <section id="contact" className={styles.contact}>
           <div className={styles.sectionHeader}>
             <h1>Contact</h1>
-            <hr />
+            <div className={styles.borderBottom} />
           </div>
           <ContactForm />
         </section>
@@ -304,7 +297,7 @@ export default function Home() {
               <p>Resume</p>
             </a>
           </div>
-          <p className={styles.copyright}>Copyright © 2023 Zachary Salvaggio</p>
+          <p className={styles.copyright}>Copyright © 2024 Zachary Salvaggio</p>
         </footer>
       </main>
     </>

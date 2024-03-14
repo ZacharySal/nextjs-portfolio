@@ -97,7 +97,7 @@
 
 .info {
   font-weight: 300;
-  line-height: 2.1rem;
+  line-height: 1.5;
   color: #133955;
 }
 
@@ -136,6 +136,11 @@
   font-size: 1rem;
   color: rgba(0, 0, 0, 0.7);
   text-align: center;
+}
+
+.borderBottom {
+  margin-top: 1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
 }
 
 .skillsGridContainer li {
