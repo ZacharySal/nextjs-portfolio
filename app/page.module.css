@@ -18,7 +18,10 @@
 
 .sectionHeader {
   margin-inline: auto;
-  width: 100%;
+  width: auto;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
   font-size: 1.75rem;
   font-weight: 700;
   text-align: center;
@@ -139,8 +142,11 @@
 }
 
 .borderBottom {
+  width: 125%;
   margin-top: 1rem;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  margin-left: -12.5%;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .skillsGridContainer li {
@@ -280,6 +286,11 @@
 @media (min-width: 1000px) {
   .desktopHidden {
     display: none !important;
+  }
+
+  .borderBottom {
+    width: 150%;
+    margin-left: -25%;
   }
 
   .mobileHidden {

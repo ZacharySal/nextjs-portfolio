@@ -76,6 +76,14 @@ export default function Home() {
                 <p>Postgresql</p>
               </li>
               <li>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" />
+                <p>SQL</p>
+              </li>
+              <li>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-plain.svg" />
+                <p>Docker</p>
+              </li>
+              <li>
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
                 <p>Javascript</p>
               </li>
@@ -87,6 +95,7 @@ export default function Home() {
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" />
                 <p>Git</p>
               </li>
+
               <li>
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" />
                 <p>AWS</p>
