@@ -189,6 +189,10 @@ export default function Home() {
                   <p className={styles.iconName}>Javascript</p>
                 </div>
                 <div className={styles.techIcon}>
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" />
+                  <p className={styles.iconName}>Postgresql</p>
+                </div>
+                <div className={styles.techIcon}>
                   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" />
                   <p className={styles.iconName}>React</p>
                 </div>
@@ -205,10 +209,7 @@ export default function Home() {
 
                   <p className={styles.iconName}>Express</p>
                 </div>
-                <div className={styles.techIcon}>
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" />
-                  <p className={styles.iconName}>MongoDB</p>
-                </div>
+
                 <div className={styles.techIcon}>
                   <img src="https://www.svgrepo.com/show/354202/postman-icon.svg" />
                   <p className={styles.iconName}>Postman</p>
