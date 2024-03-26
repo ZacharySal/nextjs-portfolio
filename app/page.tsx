@@ -215,12 +215,12 @@ export default function Home() {
                 </div>
               </div>
               <div className={styles.btnContainer}>
-                <a href="https://eclectic-lolly-f06c0b.netlify.app/" target="_blank">
+                <a href="https://zrs-friendly.netlify.app/" target="_blank">
                   <div className={styles.btn} data-button-type="demo">
                     Live Demo
                   </div>
                 </a>
-                <a href="https://github.com/ZacharySal/twitter-clone" target="_blank">
+                <a href="https://github.com/ZacharySal/pern-friendly" target="_blank">
                   <div className={styles.btn} data-button-type="code">
                     Source Code
                   </div>
