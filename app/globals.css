@@ -117,15 +117,8 @@ footer {
   color: white;
 }
 
+
 @media (min-width: 1000px) {
-  .desktop-hidden {
-    display: none !important;
-  }
-
-  .mobile-hidden {
-    display: block;
-  }
-
   main {
     gap: 8rem;
   }
@@ -203,5 +196,15 @@ footer {
     width: 30%;
     margin: 0 auto;
     text-align: center;
+  }
+}
+
+@media (min-width: 200px) {
+  .desktop-hidden {
+    display: none !important;
+  }
+
+  .mobile-hidden {
+    display: block;
   }
 }

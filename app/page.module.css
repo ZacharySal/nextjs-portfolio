@@ -282,19 +282,20 @@
   margin-top: -0.5rem;
 }
 
-
-@media (min-width: 1000px) {
+@media (min-width: 800px) {
   .desktopHidden {
     display: none !important;
   }
 
+  .mobileHidden {
+    display: block;
+  }
+}
+
+@media (min-width: 1000px) {
   .borderBottom {
     width: 150%;
     margin-left: -25%;
-  }
-
-  .mobileHidden {
-    display: block;
   }
 
   .navigation {

@@ -13,14 +13,9 @@ export default function Home() {
             <div className={styles.borderBottom} />
           </div>
           <h2 className={styles.info}>
-            I am a recently graduated software engineer with an extensive skillset in web
-            development. While I primarily focus on front end development with React and Nextjs, I
-            am also very comfortable working with APIs, SQL/NoSQL databases, and various AWS
-            services.
-            {/* I am a recently graduated software engineer with an extensive skillset in web development.
-            learning over the past two years has been primarily focused on front end development,
-            specifically, with React and Nextjs. I posess strong foundational programming skills in
-            addition to a deep understanding of HTML, CSS, and Javascript. */}
+            Hello, I am a software engineer with an extensive skillset in web development. While I
+            primarily focus on front end development with React and Nextjs, I am also very
+            comfortable working with APIs, SQL/NoSQL databases, and various AWS services.
           </h2>
           <div className={styles.introBtnContainer}>
             <a href="/resume.pdf" target="_blank">
@@ -38,7 +33,7 @@ export default function Home() {
 
         <section id="skills" className={styles.skills}>
           <div className={styles.sectionHeader}>
-            <h1>Skills</h1>
+            <h1>Tech Stack</h1>
             <div className={styles.borderBottom} />
           </div>
           <div className={styles.skillsGridContainer}>
@@ -92,10 +87,13 @@ export default function Home() {
                 <p>Typescript</p>
               </li>
               <li>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" />
+                <p>Python</p>
+              </li>
+              <li>
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" />
                 <p>Git</p>
               </li>
-
               <li>
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" />
                 <p>AWS</p>
@@ -295,7 +293,7 @@ export default function Home() {
               <p>About Me</p>
             </a>
             <a href="#skills">
-              <p>Skills</p>
+              <p>Tech Stack</p>
             </a>
             <a href="#projects">
               <p>Projects</p>
