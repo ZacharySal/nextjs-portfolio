@@ -219,7 +219,7 @@ export default function Home() {
                     Live Demo
                   </div>
                 </a>
-                <a href="https://github.com/ZacharySal/pern-friendly" target="_blank">
+                <a href="https://github.com/ZacharySal/react-friendly" target="_blank">
                   <div className={styles.btn} data-button-type="code">
                     Source Code
                   </div>
