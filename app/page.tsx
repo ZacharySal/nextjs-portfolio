@@ -1,5 +1,5 @@
-import ContactForm from "./_components/ContactForm";
-import Navbar from "./_components/Navbar";
+import ContactForm from "../components/ContactForm";
+import Navbar from "../components/Navbar";
 import styles from "./page.module.css";
 
 export default function Home() {
@@ -305,7 +305,6 @@ export default function Home() {
               <p>Resume</p>
             </a>
           </div>
-          <p className={styles.copyright}>Copyright © 2024 Zachary Salvaggio</p>
         </footer>
       </main>
     </>

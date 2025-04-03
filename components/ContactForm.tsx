@@ -2,14 +2,14 @@
 
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-import styles from "../page.module.css";
+import styles from "../app/page.module.css";
 import CircularProgress from "@mui/material/CircularProgress";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { ContactMessageSchema } from "../_models/ContactMessage";
-import type { ContactMessageForm } from "../_models/ContactMessage";
+import { ContactMessageSchema } from "../models/ContactMessage";
+import type { ContactMessageForm } from "../models/ContactMessage";
 
 export default function ContactForm() {
   const {
